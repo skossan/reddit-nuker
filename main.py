@@ -27,6 +27,7 @@ def delete_all_comments(r):
             r.comment(comment["comment_id"]).delete()
         except:
             print("Could not delete comment: " + comment["comment_id"])
+            return
 
     print(f"Successfully deleted {len(comments)} comments.")
 
@@ -37,10 +38,12 @@ def edit_and_delete_all_comments(r):
 
     for comment in comments:
         try:
+            print("Editing and Deleting comment: " + comment["comment_id"])
             r.comment(comment["comment_id"]).edit("Lorem Ipsum...")
             r.comment(comment["comment_id"]).delete()
         except:
             print("Could not edit and delete comment: " + comment["comment_id"])
+            return
 
     print(f"Successfully edited and deleted {len(comments)} comments.")
 
