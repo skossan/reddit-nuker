@@ -48,10 +48,10 @@ def edit_and_delete_all_comments(r):
 def show_all_comments(r):
     comments = get_all_comments(r)
     for comment in comments:
-        for key, value in comment.items():
-            print(f"{key}: {value}")
-            if key == "comment_permalink":
-                print("------------------")
+        print("Comment ID: " + comment["comment_id"])
+        print("Comment Body: " + comment["comment_body"])
+        print("Comment Link: " + comment["comment_permalink"])
+        print("------------------")
 
     print(f"Found {len(comments)} comments")
 
