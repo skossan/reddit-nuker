@@ -4,7 +4,7 @@ This script will edit and delete all your comments/posts.
 
 ## How to run
 
-Clone the repo and run the follow the steps below:
+Clone the repo and follow the steps below:
 
 ```
     1. Set up a new reddit app on your account (https://ssl.reddit.com/prefs/apps/).
