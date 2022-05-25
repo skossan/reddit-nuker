@@ -11,17 +11,19 @@ Clone the repo and follow the steps below:
        Scroll all the way down and click "create app".
        See screenshots.
 ```
-    
+```
     2. Edit the praw.ini file with your own credentials:
         - client_id
         - client_secret
         - your_reddit_password
         - your_reddit_username
 ```
-    
+```    
     3. Install PRAW using the command below:
         - pip3 install praw
     
+```
+```
     4. Run the script with the command below:
         - python3 main.py
 ```
