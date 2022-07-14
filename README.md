@@ -1,6 +1,6 @@
 # Reddit Nuker
 
-This script will edit and delete all your comments/posts.
+This script will edit and delete all your comments.
 
 ## How to run
 
