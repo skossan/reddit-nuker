@@ -63,7 +63,7 @@ def delete_comment(r, comment: str):
 
 def edit_comment(r, comment: str):
     try:
-        r.comment(comment).edit("Lorem Ipsum...")
+        r.comment(comment).edit(body="Lorem Ipsum...")
     except:
         print("Could not edit comment: " + comment)
         return
