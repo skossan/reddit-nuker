@@ -17,15 +17,6 @@ def get_all_comments(r):
     return list_of_comments
 
 
-def delete_all_comments(r):
-    comments = get_all_comments(r)
-    if len(comments) == 0: return print("No comments found")
-    for comment in comments:
-        delete_comment(r, comment["comment_id"])
-
-    print(f"Successfully deleted {len(comments)} comments.")
-
-
 def edit_and_delete_all_comments(r):
     comments = get_all_comments(r)
     if len(comments) == 0: return print("No comments found")
@@ -75,15 +66,12 @@ def main():
 
     print("Reddit Nuker")
     print("1. Show all comments")
-    print("2. Delete all comments")
-    print("3. Edit and delete all comments")
+    print("2. Edit and delete all comments")
 
-    menu_choice = input("Choose a number (1-3):")
+    menu_choice = input("Choose a number (1-2):")
     if menu_choice == 1 or menu_choice == "1":
         show_all_comments(r)
     elif menu_choice == 2 or menu_choice == "2":
-        delete_all_comments(r)
-    elif menu_choice == 3 or menu_choice == "3":
         edit_and_delete_all_comments(r)
     else:
         print("You should press the correct button :)")
