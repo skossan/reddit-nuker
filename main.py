@@ -11,15 +11,20 @@ def get_all_comments(r):
     comments = r.redditor(str(username)).comments.new()
     list_of_comments = []
     for comment in comments:
-        list_of_comments.append({"comment_id": comment.id,
-                                 "comment_body": comment.body,
-                                 "comment_permalink": comment.permalink})
+        list_of_comments.append(
+            {
+                "comment_id": comment.id,
+                "comment_body": comment.body,
+                "comment_permalink": comment.permalink,
+            }
+        )
     return list_of_comments
 
 
 def edit_and_delete_all_comments(r):
     comments = get_all_comments(r)
-    if len(comments) == 0: return print("No comments found")
+    if len(comments) == 0:
+        return print("No comments found")
 
     for comment in comments:
         try:
@@ -77,5 +82,5 @@ def main():
         print("You should press the correct button :)")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
