@@ -79,7 +79,7 @@ def main():
     if menu_choice == 1 or menu_choice == "1":
         show_all_comments()
     elif menu_choice == 2 or menu_choice == "2":
-        edit_and_delete_all_comments(r)
+        edit_and_delete_all_comments()
     else:
         print("You should press the correct button :)")
 
