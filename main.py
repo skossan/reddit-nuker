@@ -77,7 +77,7 @@ def main():
 
     menu_choice = input("Choose a number (1-2):")
     if menu_choice == 1 or menu_choice == "1":
-        show_all_comments(r)
+        show_all_comments()
     elif menu_choice == 2 or menu_choice == "2":
         edit_and_delete_all_comments(r)
     else:
