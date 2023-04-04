@@ -34,8 +34,8 @@ def edit_and_delete_all_comments():
     for comment in comments:
         try:
             print("Editing and Deleting comment: " + comment["comment_id"])
-            edit_comment(r, comment["comment_id"])
-            delete_comment(r, comment["comment_id"])
+            edit_comment(comment["comment_id"])
+            delete_comment(comment["comment_id"])
         except:
             print("Could not edit and delete comment: " + comment["comment_id"])
             return
