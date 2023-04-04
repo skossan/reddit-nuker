@@ -1,6 +1,9 @@
 # Imports
 import praw
 
+# Init Reddit client
+r = praw.Reddit("SCRIPT")
+r.validate_on_submit = True
 
 def get_username(reddit_object):
     username = reddit_object.user.me()
