@@ -54,7 +54,7 @@ def show_all_comments():
     print(f"Found {len(comments)} comments")
 
 
-def delete_comment(r, comment: str):
+def delete_comment(comment: str):
     try:
         r.comment(comment).delete()
     except:
