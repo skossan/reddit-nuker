@@ -43,8 +43,8 @@ def edit_and_delete_all_comments():
     print(f"Successfully edited and deleted {len(comments)} comments.")
 
 
-def show_all_comments(r):
-    comments = get_all_comments(r)
+def show_all_comments():
+    comments = get_all_comments()
     for comment in comments:
         print("Comment ID: " + comment["comment_id"])
         print("Comment Body: " + comment["comment_body"])
