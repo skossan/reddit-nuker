@@ -62,7 +62,7 @@ def delete_comment(comment: str):
         return
 
 
-def edit_comment(r, comment: str):
+def edit_comment(comment: str):
     try:
         r.comment(comment).edit(body="Lorem Ipsum...")
     except:
