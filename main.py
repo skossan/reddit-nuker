@@ -26,8 +26,8 @@ def get_all_comments():
     return list_of_comments
 
 
-def edit_and_delete_all_comments(r):
-    comments = get_all_comments(r)
+def edit_and_delete_all_comments():
+    comments = get_all_comments()
     if len(comments) == 0:
         return print("No comments found")
 
