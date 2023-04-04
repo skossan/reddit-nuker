@@ -71,9 +71,6 @@ def edit_comment(comment: str):
 
 
 def main():
-    r = praw.Reddit("SCRIPT")
-    r.validate_on_submit = True
-
     print("Reddit Nuker")
     print("1. Show all comments")
     print("2. Edit and delete all comments")
