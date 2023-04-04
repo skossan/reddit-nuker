@@ -11,8 +11,8 @@ def get_username():
     return username
 
 
-def get_all_comments(r):
-    username = get_username(r)
+def get_all_comments():
+    username = get_username()
     comments = r.redditor(str(username)).comments.new()
     list_of_comments = []
     for comment in comments:
