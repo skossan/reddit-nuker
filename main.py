@@ -1,5 +1,6 @@
 # Imports
 import praw
+import os
 
 # Init Reddit client
 r = praw.Reddit("SCRIPT")
@@ -24,6 +25,9 @@ main_menu = """
         [2] Edit and Delete all comments
 """
 
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 def get_username():
     username = r.user.me()
     return username
@@ -45,6 +49,7 @@ def get_all_comments():
 
 
 def edit_and_delete_all_comments():
+    clear_screen()
     comments = get_all_comments()
     if len(comments) == 0:
         return print("No comments found")
@@ -62,6 +67,7 @@ def edit_and_delete_all_comments():
 
 
 def show_all_comments():
+    clear_screen()
     comments = get_all_comments()
     for comment in comments:
         print("Comment ID: " + comment["comment_id"])
@@ -89,6 +95,7 @@ def edit_comment(comment: str):
 
 
 def main():
+    clear_screen()
     print(logo)
     print("")
     print(main_menu)
