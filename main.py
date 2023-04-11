@@ -5,6 +5,24 @@ import praw
 r = praw.Reddit("SCRIPT")
 r.validate_on_submit = True
 
+logo = """
+  ____          _     _ _ _   
+ |  _ \ ___  __| | __| (_) |_ 
+ | |_) / _ \/ _` |/ _` | | __|
+ |  _ <  __/ (_| | (_| | | |_ 
+ |_| \_\___|\__,_|\__,_|_|\__|
+  _   _       _               
+ | \ | |_   _| | _____ _ __   
+ |  \| | | | | |/ / _ \ '__|  
+ | |\  | |_| |   <  __/ |     
+ |_| \_|\__,_|_|\_\___|_|     
+"""
+
+main_menu = """
+    Select an option:
+        [1] Show all comments
+        [2] Edit and Delete all comments
+"""
 
 def get_username():
     username = r.user.me()
@@ -71,11 +89,12 @@ def edit_comment(comment: str):
 
 
 def main():
-    print("Reddit Nuker")
-    print("1. Show all comments")
-    print("2. Edit and delete all comments")
+    print(logo)
+    print("")
+    print(main_menu)
 
-    menu_choice = input("Choose a number (1-2):")
+    menu_choice = input(":: ")
+
     if menu_choice == 1 or menu_choice == "1":
         show_all_comments()
     elif menu_choice == 2 or menu_choice == "2":
