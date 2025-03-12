@@ -1,3 +1,4 @@
+This script was tested on 2025-03-12 and confirmed works just as well.
 # Reddit Nuker
 
 This script will edit and delete all your comments.
